@@ -1,1 +1,1 @@
-web: gunicorn facebook.wsgi --log-file -
+web: gunicorn slider.wsgi --log-file -
