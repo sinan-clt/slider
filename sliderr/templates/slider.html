@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+   <style>
+       img{
+           float: left;
+           width: 100%;
+           height: 600px;
+           object-fit: cover;
+       }
+       ul{
+           margin: 0;
+           padding: 0;
+           list-style: none;
+       }
+   </style>
+</head>
+<body>
+    <ul id="lightSlider" class="gallery">
+        <li >
+           
+            <a href=""><img src="{% static 'images/babe-2972220_1920.jpg' %} " alt="" srcset=""></a>
+
+        </li>
+        <li>
+            <a href=""><img src="{% static 'images/babe-2972219_1920.jpg' %} " alt="" srcset=""></a>
+            
+
+        </li>
+        <li >
+            <a href=""><img src="{% static 'images/babe-2972222_1920.jpg' %} " alt="" srcset=""></a>
+           
+        </li>
+        
+    </ul>
+
+
+    <script>
+        $(document).ready(function(){
+            $('#lightSlider').lightSlider({
+                item: 1,
+                slideMove: 1,
+                slideMargin: 10,
+                mode: "side",
+                useCSS: true,
+                speed: 2000,
+                auto:true,
+                pause:4500,
+                loop:true,
+                controls:true, 
+                keyPress:true,
+                pager:true,
+                gallery:false,
+                thumbMargin:3,
+                currentPagerPosition:'middle',
+                enableDrag:true,
+                swipeThreshold:40,
+                responsive:[],
+                
+                onBeforeStart: function($el) {},
+                onSliderLoad: function($el) {},
+                onBeforeSlide: function($el, scene) {},
+                onAfterSlide: function($el, scene) {},
+                         onBeforeNextSlide: function($el, scene){},
+                         onBeforePrevSlide: function($el, scene){}
+
+            });
+        });
+    </script>
+
+
+  
+    
+</body>
+</html>
